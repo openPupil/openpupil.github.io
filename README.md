@@ -1,3 +1,9 @@
+
+URL: https://lodemo.gitlab.io/openpupilwebsite/
+
+
+Only visible for project member at the moment.
+
 # TODO
 
 - add a js table
