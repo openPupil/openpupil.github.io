@@ -1,0 +1,11 @@
+links:
+- title: Home
+  url: /
+- title: Datasets
+  url: /datasets
+- title: Categories
+  url: /categories
+- title: About
+  url: /about
+- title: Search
+  url: /search

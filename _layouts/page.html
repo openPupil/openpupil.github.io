@@ -1,0 +1,37 @@
+---
+layout: default
+---
+
+<div class="intro">
+  <div class="intro-body">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <h1 class="brand-heading">{{ page.title }}</h1>
+          <p class="intro-text">
+            {{ page.description }}
+          </p>
+          <a href="#pageid" class="btn btn-circle page-scroll">
+          <i class="fa fa-angle-double-down animated"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  
+  <!-- Section -->
+  <section id="pageid">
+  <div class="container content-section">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        {% if page.subtitle %}
+        <h2 class="text-center">{{ page.subtitle }}</h2>
+        {% endif %}
+        {{ content }}
+      </div>
+    </div>
+  </div>
+  </section>
+
+
