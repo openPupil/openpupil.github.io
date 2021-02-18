@@ -14,9 +14,7 @@ author:
   url: #yoururl
 permalink: pretty
 
-baseurl: ""
-
-relative_url: "/openpupilwebsite"
+baseurl: "/openpupilwebsite"
 
 highlighter: none
 
