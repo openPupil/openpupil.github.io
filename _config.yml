@@ -14,7 +14,7 @@ author:
   url: #yoururl
 permalink: pretty
 
-baseurl: ""
+baseurl: "https://lodemo.gitlab.io/openpupilwebsite/"
 
 highlighter: none
 
