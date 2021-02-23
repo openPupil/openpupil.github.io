@@ -111,6 +111,11 @@ a:hover,a:focus {
 .nav-link.active:hover {
 	color:#1ba39c;
 }
+
+.navbar-light .add-dataset-link {
+	color:#333 !important;
+}
+
 @media(min-width:768px) {
 	.navbar-custom {
 			padding:15px 0;
@@ -466,6 +471,15 @@ section {
 	color:#333;
 	overflow:hidden;
 }
+
+.section-even {
+	background-color:#f9f9f9;
+}
+
+.section-odd {
+	background: #fff;
+}
+
 .done {
 	display:none;
 }
@@ -508,7 +522,6 @@ section {
 .people-widget {
 	font-size: 0.8rem;
 	text-align: center;
-	margin:15px;
   }
 
 .people-person {
@@ -528,7 +541,6 @@ section {
   }
   
   .people-widget .avatar {
-	width: 80%;
 	max-width: 150px;
 	height: auto;
   }

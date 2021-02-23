@@ -1,6 +1,7 @@
 ---
 layout: search
 title: Search
+nav: search
 ---
 
 <style>

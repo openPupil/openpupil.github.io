@@ -2,6 +2,7 @@
 layout: page
 title: Categories
 description: "Lists of categories"
+nav: categories
 ---
 
 

@@ -2,9 +2,10 @@
 layout: page
 title: About
 description: "About OpenLightScience"
+nav: about
 ---
 
-About OpenLightScience
+This website..
 
 ### Features
 
