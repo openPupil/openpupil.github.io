@@ -10,12 +10,12 @@
          <ul class="navbar-custom navbar-nav ml-auto">
 
                <li class="nav-item">
-                  <a class="nav-link" href="#">Home</a>
+                  <a class="nav-link page-scroll" href="#intro">Home</a>
                </li>
 
                {% for item in site.pages %}
                <li class="nav-item">
-                  <a class="nav-link" href="{{ item.nav | prepend: '#' }}">{{ item.title }}</a>
+                  <a class="nav-link page-scroll" href="{{ item.nav | prepend: '#' }}">{{ item.title }}</a>
                </li>
                {% endfor %}
 

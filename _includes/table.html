@@ -1,0 +1,28 @@
+<table id="posts_table" class="table table-striped table-bordered" style="width:100%">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Summary</th>
+            <th>Tags</th>
+            <th>Categories</th>
+            <th>Date</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        {% for post in site.posts %}
+
+        <tr>
+            <td>{{ post.title | strip_html | escape }}</td>
+            <td>{{post.description | strip_html | strip_newlines | escape }}</td>
+            <td>{{post.summary | strip_html | strip_newlines | escape }}</td>
+            <td>{{ post.tags | join: ', ' }}</td>
+            <td>{{post.categories | join: ', '}}</td>
+            <td>{{ post.date }}</td>
+        </tr>
+
+        {% endfor %}
+
+    </tbody>
+</table>

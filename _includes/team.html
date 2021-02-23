@@ -18,8 +18,9 @@
                                 <h3>{{ person.subtitle }}</h3>
                                 {% endif %}
                                 <ul class="network-icon" aria-hidden="true">
-                                    <li><a href="/#contact"><i class="fa fa-envelope"></i></a>
-                                    </li>
+                                    {% if person.mail %}
+                                    <li><a href="{{ person.mail | prepend: 'mailto:' }}"><i class="fa fa-envelope"></i></a></li>
+                                    {% endif %}
                                     {% if person.twitter %}
                                     <li><a href="{{ person.twitter }}" target="_blank" rel="noopener"><i class="fa fa-twitter"></i></a></li>                            
                                     {% endif %}
