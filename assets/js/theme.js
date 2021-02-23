@@ -22,4 +22,63 @@ $( document ).ready(function() {
         $('.navbar-toggle:visible').click();
     });
 
+    // Table init and charts
+    var table = $('#posts_table').DataTable({
+        "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]],
+        dom: 'Pfrtip'
+    });
+
+    var chartContainer = $('#table_chart');
+    var searchContainer = $('#table_search');
+
+
+    new $.fn.dataTable.SearchPanes(table, {});
+    table.searchPanes.container().prependTo(searchContainer);
+    // table.searchPanes.resizePanes();
+
+
+    var chart = Highcharts.chart(chartContainer[0], {
+        chart: {
+            type: 'pie',
+            backgroundColor: '#fff',
+        },
+        title: {
+            text: '',
+        },
+        series: [
+            {
+                data: chartData(table),
+            },
+        ],
+    });
+ 
+    // On each draw, update the data in the chart
+    table.on('draw', function () {
+        chart.series[0].setData(chartData(table));
+    });
+
 });
+
+function chartData(table) {
+    var counts = {};
+ 
+    // Count the number of entries for each position
+    table
+        .column(3, { search: 'applied' })
+        .data()
+        .each(function (val) {
+            if (counts[val]) {
+                counts[val] += 1;
+            } else {
+                counts[val] = 1;
+            }
+        });
+ 
+    // And map it to the format highcharts uses
+    return $.map(counts, function (val, key) {
+        return {
+            name: key,
+            y: val,
+        };
+    });
+}

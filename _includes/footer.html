@@ -13,11 +13,41 @@
 <script src="{{ site.baseurl }}/assets/js/theme.js"></script>
 
 <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.23/datatables.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/searchpanes/1.2.1/js/dataTables.searchPanes.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/select/1.3.1/js/dataTables.select.min.js"></script>
 <script type="text/javascript" src="https://cdn.datatables.net/1.10.23/js/dataTables.bootstrap4.min.js"></script>
+<script type="text/javascript" src="https://code.highcharts.com/highcharts.js"></script>
 
 
-<script>
+<!-- <script>
 $(document).ready( function () {
-    $('#posts_table').DataTable();
+
+    var table = $('#posts_table').DataTable({
+        "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]],
+        dom: 'Pfrtip'
+    });
+
+    var chartContainer = $('#table_chart');
+
+    var chart = Highcharts.chart(chartContainer[0], {
+        chart: {
+            type: 'pie',
+        },
+        title: {
+            text: 'Staff Count Per Position',
+        },
+        series: [
+            {
+                data: chartData(table),
+            },
+        ],
+    });
+ 
+    // On each draw, update the data in the chart
+    table.on('draw', function () {
+        chart.series[0].setData(chartData(table));
+    });
+
 });
-</script>
+
+</script> -->
