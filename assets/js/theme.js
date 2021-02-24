@@ -22,10 +22,21 @@ $( document ).ready(function() {
         $('.navbar-toggle:visible').click();
     });
 
-    // Table init and charts
+
+
+    // Datatables and chart
     var table = $('#posts_table').DataTable({
         "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]],
-        dom: 'Pfrtip'
+        dom: 'Pfrtip',
+        responsive: {
+            details: {
+				type: 'column',
+                target: 'tr',
+			}
+        },
+        columnDefs: [
+            { responsivePriority: 1, targets: -1 },
+        ]
     });
 
     var chartContainer = $('#table_chart');

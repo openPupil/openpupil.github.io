@@ -6,8 +6,6 @@ Only visible for project member at the moment.
 
 # TODO
 
-- add a js table
-
 - improve search result-item look
 -- remove search altogether when the table has a search function?
 
@@ -19,8 +17,11 @@ Only visible for project member at the moment.
 
 - add teams section in home
 -- added teams section to home, configured through files in _people
-- nav scrolling
+- added nav scrolling
 
+- added a js table
+- added categories filter and plot
+- added table row on click to post page
 
 # Table
 
