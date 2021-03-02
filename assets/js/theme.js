@@ -40,7 +40,7 @@ $( document ).ready(function() {
     });
 
     var chartContainer = $('#table_chart');
-    var searchContainer = $('#table_search');
+    var searchContainer = $('#table_filter');
 
 
     new $.fn.dataTable.SearchPanes(table, {});

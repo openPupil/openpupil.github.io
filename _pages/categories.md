@@ -8,5 +8,5 @@ nav: categories
 
 <div id="table_chart">
 </div>
-<div id="table_search">
+<div id="table_filter">
 </div>
