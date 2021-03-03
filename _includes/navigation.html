@@ -1,8 +1,8 @@
 <nav id="navbar-scroll" class="navbar navbar-expand-md navbar-custom fixed-top">
    <div class="container">
 
-      <a class="navbar-brand" href="{{ site.baseurl }}/index.html"><img class="navbar-logo" src="{{ site.baseurl }}/assets/img/logo.svg"/></a>
-      <a class="navbar-brand" href="{{ site.baseurl }}/index.html">{{ site.title }}</a>
+      <a class="navbar-brand" href="{{ site.baseurl }}/"><img class="navbar-logo" src="{{ site.baseurl }}/assets/img/logo.svg"/></a>
+      <a class="navbar-brand" href="{{ site.baseurl }}/">{{ site.title }}</a>
 
       <button class="navbar-light navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsDefault" aria-controls="navbarsDefault" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -13,7 +13,7 @@
 
                <!-- Depending on the current page either index (default layout) or a post page (post layout) we need different hrefs -->
                <li class="nav-item">
-                  <a class="nav-link page-scroll" {% if page.layout == "default" %} href="#intro" {% else %} href="{{ site.baseurl }}/#intro" {% endif %} >Home</a>
+                  <a class="nav-link page-scroll" {% if page.layout == "default" %} href="#intro" {% else %} href="{{ site.baseurl }}/" {% endif %} >Home</a>
                </li>
 
                {% assign sorted_pages = site.pages | sort: 'front-page-order' %}
