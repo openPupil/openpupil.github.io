@@ -24,9 +24,10 @@ title: Home
     </div>
 </div>
     
-{% for p in site.pages %}
+{% assign sorted_pages = site.pages | sort: 'front-page-order' %}
+{% for p in sorted_pages %}
 
-<section id="{{ p.nav }}" class="{% cycle 'section-even', 'section-odd' %}">
+<section id="{{ p.nav-link }}" class="{% cycle 'section-even', 'section-odd' %}">
     <div class="container content-section">
         <div class="row justify-content-center">
             <div class="col-md-8">

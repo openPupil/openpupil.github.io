@@ -1,8 +1,9 @@
 ---
 layout: page
-title: Contributions
-description: "Collaborators to the project"
-nav: people
+title: People
+description: "Contributors of the project"
+nav-link: people
+front-page-order: 3
 ---
 
 <div class="people-widget">

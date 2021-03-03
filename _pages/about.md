@@ -2,7 +2,8 @@
 layout: page
 title: About
 description: "About OpenLightScience"
-nav: about
+nav-link: about
+front-page-order: 0
 ---
 
 This website..

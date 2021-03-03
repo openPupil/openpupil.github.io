@@ -23,11 +23,9 @@ $( document ).ready(function() {
     });
 
 
-
     // Datatables and chart
     var table = $('#posts_table').DataTable({
-        "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]],
-        dom: 'Pfrtip',
+        "lengthMenu": [[5, 10, 25, 50, -1], [5, 10, 25, 50, "All"]],
         responsive: {
             details: {
 				type: 'column',
@@ -45,7 +43,7 @@ $( document ).ready(function() {
 
     new $.fn.dataTable.SearchPanes(table, {});
     table.searchPanes.container().prependTo(searchContainer);
-    // table.searchPanes.resizePanes();
+    table.searchPanes.rebuildPane();
 
 
     var chart = Highcharts.chart(chartContainer[0], {

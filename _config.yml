@@ -1,6 +1,6 @@
-site: OpenLightScience
+site: OpenPupil.io
 url: #yoururl
-title: OpenLightScience
+title: OpenPupil.io
 description: Open-source light science community website.
 twitter:
   username: #yourusername
@@ -8,7 +8,7 @@ twitter:
   creator: #yourusername
 author:
   twitter: #yourusername
-  name: OpenLightScience
+  name: OpenPupil.io
   avatar:
   email: #youremail
   url: #yoururl

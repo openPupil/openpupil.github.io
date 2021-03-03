@@ -1,5 +1,7 @@
 <nav id="navbar-scroll" class="navbar navbar-expand-md navbar-custom fixed-top">
    <div class="container">
+
+      <a class="navbar-brand" href="{{ site.baseurl }}/index.html"><img class="navbar-logo" src="{{ site.baseurl }}/assets/img/logo.svg"/></a>
       <a class="navbar-brand" href="{{ site.baseurl }}/index.html">{{ site.title }}</a>
 
       <button class="navbar-light navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsDefault" aria-controls="navbarsDefault" aria-expanded="false" aria-label="Toggle navigation">
@@ -14,9 +16,10 @@
                   <a class="nav-link page-scroll" {% if page.layout == "default" %} href="#intro" {% else %} href="{{ site.baseurl }}/#intro" {% endif %} >Home</a>
                </li>
 
-               {% for item in site.pages %}
+               {% assign sorted_pages = site.pages | sort: 'front-page-order' %}
+               {% for item in sorted_pages %}
                <li class="nav-item">
-                  <a class="nav-link page-scroll" {% if page.layout == "default" %} href="{{ item.nav | prepend: '#' }}" {% else %} href="{{ site.baseurl }}{{ item.nav | prepend: '/#' }}" {% endif %}>{{ item.title }}</a>
+                  <a class="nav-link page-scroll" {% if page.layout == "default" %} href="{{ item.nav-link | prepend: '#' }}" {% else %} href="{{ site.baseurl }}{{ item.nav-link | prepend: '/#' }}" {% endif %}>{{ item.title }}</a>
                </li>
                {% endfor %}
 
