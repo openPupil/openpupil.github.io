@@ -13,13 +13,13 @@
 
                <!-- Depending on the current page either index (default layout) or a post page (post layout) we need different hrefs -->
                <li class="nav-item">
-                  <a class="nav-link page-scroll" {% if page.layout == "default" %} href="#intro" {% else %} href="{{ site.baseurl }}/" {% endif %} >Home</a>
+                  <a class="nav-link page-scroll" {% if page.layout == "frontpage" %} href="#intro" {% else %} href="{{ site.baseurl }}/" {% endif %} >Home</a>
                </li>
 
                {% for item in site.pages %}
 
                <li class="nav-item">
-                  <a class="nav-link page-scroll" {% if page.layout == "default" %} href="{{ item.nav-link | prepend: '#' }}" {% else %} href="{{ site.baseurl }}{{ item.nav-link | prepend: '/#' }}" {% endif %}>{{ item.title }}</a>
+                  <a class="nav-link page-scroll" {% if page.layout == "frontpage" %} href="{{ item.nav-link | prepend: '#' }}" {% else %} href="{{ site.baseurl }}{{ item.nav-link | prepend: '/#' }}" {% endif %}>{{ item.title }}</a>
                </li>
                
                {% endfor %}
