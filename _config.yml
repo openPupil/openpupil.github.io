@@ -1,17 +1,10 @@
 site: OpenPupil.io
 url: #yoururl
-title: OpenPupil.io
+title: OpenPupil
 description: Open-source light science community website.
-twitter:
-  username: #yourusername
-  card: summary
-  creator: #yourusername
-author:
-  twitter: #yourusername
-  name: OpenPupil.io
-  avatar:
-  email: #youremail
-  url: #yoururl
+facebook: "#"
+twitter: "#"
+github: "https://github.com/openPupil"
 permalink: pretty
 
 baseurl: "/openpupilwebsite"
@@ -37,6 +30,9 @@ plugins:
 collections:
   pages:
     output: false
+    permalink: /:name
+  legal:
+    output: true
     permalink: /:name
   posts:
     output: true

@@ -2,7 +2,7 @@
 layout: default
 title: Home
 ---
-    
+
 <!-- Pages are navigated by scrollspy, see body tag -->
 
 <!-- Intro -->
@@ -30,7 +30,7 @@ title: Home
 <section id="{{ p.nav-link }}" class="{% cycle 'section-even', 'section-odd' %}">
     <div class="container content-section">
         <div class="row justify-content-center">
-            <div class="col-md-8">
+            <div {% if p.front-page-width %} class="col-md-{{ p.front-page-width }}" {% else %} class="col-md-8" {% endif %}>
                 {% if p.title %}
                 <h2 class="text-center">{{ p.title }}</h2>
                 {% endif %}
@@ -56,21 +56,6 @@ title: Home
                 <p>
                     <i><a href="mailto:wowthemesnet@gmail.com" class="highlightlink">wowthemesnet@gmail.com</a></i>
                 </p>
-                <ul class="list-inline banner-social-buttons">
-                    
-                    <li class="d-inline">
-                    <a href="https://twitter.com/wowthemesnet" class="btn btnghost btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
-                    </li>
-                    
-                    <li class="d-inline">
-                    <a href="https://www.facebook.com/pages/wowthemesnet/562560840468823" class="btn btnghost btn-lg"><i class="fa fa-facebook fa-fw"></i> <span class="network-name">Facebook</span></a>
-                    </li>
-                    
-                    <li class="d-inline">
-                    <a href="https://github.com/wowthemesnet/template-aries-bootstrap-html" class="btn btnghost btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
-                    </li>
-                    
-                </ul>
             </div>
         </div>
     </div>
