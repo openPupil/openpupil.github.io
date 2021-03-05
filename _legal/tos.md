@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: page
 title: Terms of Use
 description: This is a collection of short CSS snippets I thought might be useful for beginners
 ---

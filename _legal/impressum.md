@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: page
 title: Impressum
 description: This is a collection of short CSS snippets I thought might be useful for beginners
 ---

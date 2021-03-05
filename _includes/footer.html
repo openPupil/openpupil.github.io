@@ -12,16 +12,6 @@
     <footer>
         <div class="container">
             <div class="row">
-                <!-- <div class="col-sm-6 col-md-3 item">
-                    <h3>Sitemap</h3>
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        {% assign sorted_pages = site.pages | sort: 'front-page-order' %}
-                        {% for p in sorted_pages %}
-                        <li><a href="{{ p.nav-link }}">{{ p.title }}</a></li>
-                        {% endfor %}
-                    </ul>
-                </div> -->
                 <div class="col-sm-6 col-md-3 item">
                     <h3>Resources</h3>
                     <ul>
@@ -33,10 +23,11 @@
                 <div class="col-sm-6 col-md-3 item">
                     <h3>Legal</h3>
                     <ul>
-                        <li><a href="{{ site.baseurl}}/impressum">Impressum</a></li>
-                        <li><a href="{{ site.baseurl}}/privacy">Privacy Policy</a></li>
-                        <li><a href="{{ site.baseurl}}/tos">Terms of Use</a></li>
-                        <li><a href="{{ site.baseurl}}/licenses">Licenses</a></li>
+                        {% for p in site.legal %}
+
+                        <li><a href="{{ site.baseurl}}{{ p.url }}">{{ p.title }}</a></li>
+                        
+                        {% endfor %}
                     </ul>
                 </div>
                 <div class="col-md-6 item text">
@@ -64,3 +55,4 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 <script src="{{ site.baseurl }}/assets/js/theme.js"></script>
+<script src="{{ site.baseurl }}/assets/js/lightbox.min.js"></script>

@@ -30,6 +30,7 @@ plugins:
 collections:
   pages:
     output: false
+    sort_by: front-page-order
     permalink: /:name
   legal:
     output: true
