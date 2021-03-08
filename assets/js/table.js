@@ -5,13 +5,36 @@ $( document ).ready(function() {
         "lengthMenu": [[5, 10, 25, 50, -1], [5, 10, 25, 50, "All"]],
         responsive: {
             details: {
-				type: 'column',
-                target: 'tr',
-			}
+                type: 'column'
+            }
         },
-        columnDefs: [
-            { responsivePriority: 1, targets: -1 },
+        columnDefs: [{
+                className: 'dtr-control',
+                orderable: false,
+                targets:   0
+            },
+            { visible: false, searchable: false, targets: -1 },
+            { responsivePriority: 1, targets: 0 },
+            { responsivePriority: 1, targets: -2 },
         ]
+    });
+
+    // $('#myTable').on( 'mouseenter', 'tbody tr', function () {
+    //     var rowData = table.row( this ).data();
+    //      // ... show tool tip
+    //   } );
+
+    $('#posts_table tbody').on('mouseenter', 'tr > td:not(.child)', function () {
+        if (table.cell(this).index().column>0) {
+            this.style.cursor = 'pointer';
+        }
+    });
+
+    $('#posts_table tbody').on('click', 'tr > td:not(.child)', function () {
+        if (table.cell(this).index().column>0) {
+            var data = table.row(this).data();
+            window.location.href = data[data.length-1];
+        }
     });
 
     var chartContainer = $('#table_chart');
