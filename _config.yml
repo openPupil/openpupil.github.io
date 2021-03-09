@@ -1,9 +1,8 @@
 site: OpenPupil.io
 url: #yoururl
 title: OpenPupil
-description: Open-source light science community website.
-facebook: "#"
-twitter: "#"
+description: A community-driven database of open-source pupil datasets.
+summary: A curation of open-source pupil datasets compiled by researcher from different fields.
 github: "https://github.com/openPupil"
 permalink: pretty
 

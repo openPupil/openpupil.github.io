@@ -4,27 +4,16 @@ title: Impressum
 ---
 
 ## Angaben gemäß § 5 TMG
-Technische Universität Darmstadt  
-Karolinenplatz 5  
-S2|09 14  
-64289 Darmstadt  
-Telefon: +49 6151 16-0  
-
-Vertreten durch:  
-Präsidentin der Technischen Universität Darmstadt, Prof. Dr. Tanja Brühl
-
-
-## Kontakt
-E-Mail: info@openpupil.io  
-
-
-## Redaktionell Verantwortlicher
 Fachgebiet Lichttechnik  
 Technische Universität Darmstadt  
 Prof. Dr.-Ing. Tran Quoc Khanh  
 Hochschulstraße 4a  
 64289 Darmstadt  
-+49 6151 16-22877  
++49 6151 16-22877 
+
+
+## Kontakt
+E-Mail: info@openpupil.io  
 
 
 ## Haftung für Inhalte

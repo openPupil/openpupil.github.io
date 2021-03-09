@@ -27,7 +27,7 @@ title: Home
 {% for p in site.pages %}
 
 <section id="{{ p.nav-link }}" class="{% cycle 'section-even', 'section-odd' %}">
-    <div class="container content-section">
+    <div class="container content-section text-center">
         <div class="row justify-content-center">
             <div {% if p.front-page-width %} class="col-md-{{ p.front-page-width }}" {% else %} class="col-md-8" {% endif %}>
                 {% if p.title %}
@@ -40,23 +40,4 @@ title: Home
 </section>
 
 {% endfor %}
-
-
-<!-- Some message at the end of the index page -->
-<!-- (section backgroundcolor is automatically set based on number of pages) -->
-<section id="contact" {% assign pvalue = site.pages.size | modulo: 2 %} {% if pvalue == 0 %} class="section-even" {% else %} class="section-odd" {% endif %}>
-    <div class="container content-section text-center">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <h2>Author's Message</h2>
-                <p>
-                        If you like "Aries" template, we'd love to hear from you, whether it be feedback, thanks, new template ideas or even just to say hello, we welcome it all!
-                </p>
-                <p>
-                    <i><a href="mailto:wowthemesnet@gmail.com" class="highlightlink">wowthemesnet@gmail.com</a></i>
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
 
