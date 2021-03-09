@@ -73,7 +73,7 @@ function chartData(table) {
  
     // Count the number of entries for each position
     table
-        .column(3, { search: 'applied' })
+        .column(4, { search: 'applied' })
         .data()
         .each(function (val) {
             if (counts[val]) {
