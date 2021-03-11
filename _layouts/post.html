@@ -58,11 +58,6 @@ layout: default
             </div>  
 
             <div class="text-field">
-              <span class="text-field-label">Category</span>
-              <p>{{ page.category }}</p>
-            </div>  
-
-            <div class="text-field">
               <span class="text-field-label">Name</span>
               <p>{{ page.url }}</p>
             </div>  
@@ -74,6 +69,17 @@ layout: default
               {% for t in page.tags %}
   
               <span class="chip"><span class="chip__content">{{ t }}</span></span>
+    
+              {% endfor %}
+            </div>
+          </div>
+
+          <div class="post-meta-fields">
+            <div class="text-field">
+              <span class="text-field-label">Categories</span><br>
+              {% for c in page.categories %}
+  
+              <span class="chip"><span class="chip__content">{{ c }}</span></span>
     
               {% endfor %}
             </div>
@@ -117,29 +123,44 @@ layout: default
           <div class="sidebar">
 
               <div class="widget">
+                  <h6>Added by</h6>
+                  <a href="mailto:{{ page.contact }}">{{ page.author }}</a>
+                  <br>
+              </div>
+
+              <div class="widget">
                   <h6>Links</h6>
                   <ul class="list-unstyled">
-                  <li><a href="https://www.wowthemes.net/themes/tag/bootstrap/" target="_blank">Project Website</a></li>
-                  <li><a href="http://bootstrapbay.com/?ref=wowthemesnet" target="_blank">Faculty Website</a></li>
-                  <li><a href="https://graygrids.com/ref/wowthemesnet/" target="_blank"><i class="fa fa-github fa-fw"></i> Github</a></li>
-                  <li><a href="https://themehunt.com/?ref=wowthemesnet" target="_blank"><i class="fa fa-graduation-cap fa-fw"></i> Publication</a></li>
+
+                  {% for pl in page.links %}
+                  <li><a href="{{ pl.link }}" target="_blank">{{ pl.name }}</a></li>
+                  {% endfor %}
+
+                  {% if page.github_link %}
+                  <li><a href="{{ page.github_link }}" target="_blank"><i class="fa fa-github fa-fw"></i> Github</a></li>
+                  {% endif %}
+
+                  {% if page.publication_link %}
+                  <li><a href="{{ page.publication_link }}" target="_blank"><i class="fa fa-graduation-cap fa-fw"></i> Publication</a></li>
+                  {% endif %}
+
                   </ul>
               </div>
 
               <div class="widget">
                 <h6>License</h6>
-                <a>{{ page.license }}</a>
+                <a>{% if page.license %} {{ page.license }} {% else %} N/A {% endif %}</a>
               </div>
 
               <h6><a data-toggle="collapse" href="#citation" role="button" aria-expanded="false" aria-controls="citation"><i class="fa fa-quote-left fa-fw"></i> Cite</a></h6>
               <div class="collapse" id="citation">
                 <div class="card card-body citation-field">
-                  {{ page.summary }} 
+                  {{ page.citation }} 
                 </div>
                 <br>
               </div>
 
-              <a href="https://github.com/wowthemesnet/template-aries-bootstrap-html" target="_blank" class="btn btnghost btn-lg"><i class="fa fa-external-link fa-fw"></i> <span class="network-name">Download</span></a>
+              <a href="{{ page.download_link }}" target="_blank" class="btn btnghost btn-lg"><i class="fa fa-external-link fa-fw"></i> <span class="network-name">Download</span></a>
               
           </div>
       </div>

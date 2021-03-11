@@ -30,6 +30,7 @@ p {
 img {
 	max-width:100%;
 }
+
 @media(min-width:768px) {
 	p {
 			margin:0 0 35px;
@@ -37,6 +38,7 @@ img {
 			line-height:1.6;
 	}
 }
+
 a {
 	color:inherit;
 	-webkit-transition:all .2s ease-in-out;
@@ -118,7 +120,6 @@ a:hover,a:focus {
 	color:#333 !important;
 }
 
-
 @media(min-width:768px) {
 	.navbar-custom {
 			padding:7px 0;
@@ -148,6 +149,7 @@ a:hover,a:focus {
 		border:1px solid rgba(0,0,0,0.03);
 	}
 }
+
 .intro {
 	display:table;
 	width:100%;
@@ -188,6 +190,7 @@ a:hover,a:focus {
 .intro .intro-body .intro-text {
 	font-size:18px;
 }
+
 @media(min-width:768px) {
 	.intro {
 			height:100vh;
@@ -208,6 +211,7 @@ a:hover,a:focus {
 				letter-spacing:3px;
 	}
 }
+
 .btn-circle {
 	width:50px;
 	height:50px;
@@ -244,6 +248,7 @@ a:hover,a:focus {
 	-webkit-animation-timing-function:linear;
 	-moz-animation-timing-function:linear;
 }
+
 @-webkit-keyframes pulse {
 	0% {
 			-webkit-transform:scale(1);
@@ -258,6 +263,7 @@ a:hover,a:focus {
 			transform:scale(1);
 	}
 }
+
 @-moz-keyframes pulse {
 	0% {
 			-moz-transform:scale(1);
@@ -272,6 +278,7 @@ a:hover,a:focus {
 			transform:scale(1);
 	}
 }
+
 .content-section {
 	padding-top:40px;
 	padding-bottom:40px;
@@ -282,12 +289,14 @@ a:hover,a:focus {
 	padding-bottom:40px;
 	clear:both;
 }
+
 @media(min-width:767px) {
 	.content-section {
 			padding:150px 0;
 				 clear:both;
 	}
 }
+
 .btn {
 	border-radius:0;
 	text-transform:uppercase;
@@ -311,11 +320,13 @@ a:hover,a:focus {
 ul.banner-social-buttons {
 	margin-top:0;
 }
+
 @media(max-width:1199px) {
 	ul.banner-social-buttons {
 			margin-top:15px;
 	}
 }
+
 @media(max-width:767px) {
 	ul.banner-social-buttons li {
 			display:block;
@@ -347,6 +358,7 @@ ul.banner-social-buttons {
 		padding-top: 10%;
 	}
 }
+
 footer {
 	padding:40px 0;
 	z-index:1;
@@ -487,8 +499,11 @@ img {
 	opacity:1;
 }
 .sidebar {
-	padding-left:10%;
-	font-size:15px;
+	padding-left: 10%;
+	font-size: 15px;
+	position: -webkit-sticky; /* Safari */
+	position: sticky;
+	top: 80px;
 }
 .widget {margin-bottom:2rem;}
 .widget ul li { border-bottom: 1px solid #f3f3f3;padding:6px 0;}
@@ -500,7 +515,7 @@ section:after {
 section {
 	background-color:#f9f9f9;
 	color:#333;
-	overflow:hidden;
+	//overflow:hidden;
 }
 
 .section-even {

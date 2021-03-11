@@ -18,9 +18,11 @@
 
                {% for item in site.pages %}
 
+               {% if item.nav-link %}
                <li class="nav-item">
                   <a class="nav-link page-scroll" {% if page.layout == "frontpage" %} href="{{ item.nav-link | prepend: '#' }}" {% else %} href="{{ site.baseurl }}{{ item.nav-link | prepend: '/#' }}" {% endif %}>{{ item.title }}</a>
                </li>
+               {% endif %}
                
                {% endfor %}
 

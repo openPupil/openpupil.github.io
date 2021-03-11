@@ -2,8 +2,8 @@
 layout: page
 title: Message
 description: "Message to the community"
-nav-link: message
 front-page-order: 4
+# nav-link is missing, thus its not showing in the navigation
 ---
 
 <p>

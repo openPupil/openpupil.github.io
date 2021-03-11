@@ -8,6 +8,10 @@ $( document ).ready(function() {
                 type: 'column'
             }
         },
+        searchPanes:{
+            threshold: 1,
+            columns: [ 4, 5 ] // which columns are tagged in the filtering pane
+        },
         columnDefs: [{
                 className: 'dtr-control',
                 orderable: false,
@@ -16,14 +20,35 @@ $( document ).ready(function() {
             { visible: false, searchable: false, targets: -1 },
             { responsivePriority: 1, targets: 0 },
             { responsivePriority: 1, targets: -2 },
+            { 
+                // categories and tages need to be rendered as a array for the search panes
+                targets: 4,
+                render: function (data, type, row) {
+                  if (type === 'sp') {
+                    return data.split(', ') 
+                  }
+                  return data;
+                },
+                searchPanes: {
+                  orthogonal:'sp'
+                }
+            },
+            {
+                targets: 5,
+                render: function (data, type, row) {
+                  if (type === 'sp') {
+                    return data.split(', ')
+                  }
+                  return data;
+                },
+                searchPanes: {
+                  orthogonal:'sp'
+                }
+              }
         ]
     });
 
-    // $('#myTable').on( 'mouseenter', 'tbody tr', function () {
-    //     var rowData = table.row( this ).data();
-    //      // ... show tool tip
-    //   } );
-
+    // To be able to click on the whole row to go to the post page, show mouse cursor and add link to row
     $('#posts_table tbody').on('mouseenter', 'tr > td:not(.child)', function () {
         if (table.cell(this).index().column>0) {
             this.style.cursor = 'pointer';
@@ -41,11 +66,10 @@ $( document ).ready(function() {
     var searchContainer = $('#table_filter');
 
 
-    new $.fn.dataTable.SearchPanes(table, {});
     table.searchPanes.container().prependTo(searchContainer);
     table.searchPanes.rebuildPane();
 
-
+    // The tags showns as a chart, see chartdata function to select which column is shown
     var chart = Highcharts.chart(chartContainer[0], {
         chart: {
             type: 'pie',
@@ -69,13 +93,19 @@ $( document ).ready(function() {
 });
 
 function chartData(table) {
+    var split_data = [];
     var counts = {};
  
-    // Count the number of entries for each position
+    // Split the entries as they are string lists
     table
         .column(4, { search: 'applied' })
         .data()
         .each(function (val) {
+            split_data.push(...val.split(', '));
+        });
+
+    // Count the number of entries for each position
+    split_data.forEach(function (val) {
             if (counts[val]) {
                 counts[val] += 1;
             } else {
