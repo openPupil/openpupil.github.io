@@ -18,11 +18,11 @@
         <tr>
             <td></td>
             <td>{{ post.title | strip_html | escape }}</td>
-            <td>{{post.description | strip_html | strip_newlines | escape }}</td>
-            <td>{{post.summary | strip_html | strip_newlines | escape }}</td>
-            <td>{{ post.tags | join: ', ' }}</td>
-            <td>{{ post.categories | join: ', ' }}</td>
-            <td>{{ post.date }}</td>
+            <td>{{ post.description | strip_html | strip_newlines | escape }}</td>
+            <td>{{ post.summary | strip_html | strip_newlines | escape }}</td>
+            <td>{{ post.tags | join: ', ' | strip_html | escape }}</td>
+            <td>{{ post.categories | join: ', ' | strip_html | escape }}</td>
+            <td>{{ post.date | date: "%-d %B %Y" }}</td>
             <td>{{ site.baseurl }}{{ post.url }}</td>
         </tr>
 

@@ -44,7 +44,11 @@ $( document ).ready(function() {
                 searchPanes: {
                   orthogonal:'sp'
                 }
-              }
+            },
+            // {
+            //     targets: 6, // 2021-03-06 00:00:00 +0100
+            //     width: "15%"
+            // }
         ]
     });
 
