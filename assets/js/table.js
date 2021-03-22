@@ -44,11 +44,7 @@ $( document ).ready(function() {
                 searchPanes: {
                   orthogonal:'sp'
                 }
-            },
-            // {
-            //     targets: 6, // 2021-03-06 00:00:00 +0100
-            //     width: "15%"
-            // }
+            }
         ]
     });
 
@@ -73,55 +69,59 @@ $( document ).ready(function() {
     table.searchPanes.container().prependTo(searchContainer);
     table.searchPanes.rebuildPane();
 
-    // The tags showns as a chart, see chartdata function to select which column is shown
-    var chart = Highcharts.chart(chartContainer[0], {
-        chart: {
-            type: 'pie',
-            backgroundColor: '#fff',
-        },
-        title: {
-            text: '',
-        },
-        series: [
-            {
-                data: chartData(table),
-            },
-        ],
-    });
+
+    // // Comment out this to show the categories chart
+    // // The tags showns as a chart, see chartdata function to select which column is shown
+    // var chart = Highcharts.chart(chartContainer[0], {
+    //     chart: {
+    //         type: 'pie',
+    //         backgroundColor: '#fff',
+    //     },
+    //     title: {
+    //         text: '',
+    //     },
+    //     series: [
+    //         {
+    //             data: chartData(table),
+    //         },
+    //     ],
+    // });
  
-    // On each draw, update the data in the chart
-    table.on('draw', function () {
-        chart.series[0].setData(chartData(table));
-    });
+    // // On each draw, update the data in the chart
+    // table.on('draw', function () {
+    //     chart.series[0].setData(chartData(table));
+    // });
 
 });
 
-function chartData(table) {
-    var split_data = [];
-    var counts = {};
- 
-    // Split the entries as they are string lists
-    table
-        .column(4, { search: 'applied' })
-        .data()
-        .each(function (val) {
-            split_data.push(...val.split(', '));
-        });
 
-    // Count the number of entries for each position
-    split_data.forEach(function (val) {
-            if (counts[val]) {
-                counts[val] += 1;
-            } else {
-                counts[val] = 1;
-            }
-        });
+// // Comment out this to show the categories chart
+// function chartData(table) {
+//     var split_data = [];
+//     var counts = {};
  
-    // And map it to the format highcharts uses
-    return $.map(counts, function (val, key) {
-        return {
-            name: key,
-            y: val,
-        };
-    });
-}
+//     // Split the entries as they are string lists
+//     table
+//         .column(4, { search: 'applied' })
+//         .data()
+//         .each(function (val) {
+//             split_data.push(...val.split(', '));
+//         });
+
+//     // Count the number of entries for each position
+//     split_data.forEach(function (val) {
+//             if (counts[val]) {
+//                 counts[val] += 1;
+//             } else {
+//                 counts[val] = 1;
+//             }
+//         });
+ 
+//     // And map it to the format highcharts uses
+//     return $.map(counts, function (val, key) {
+//         return {
+//             name: key,
+//             y: val,
+//         };
+//     });
+// }

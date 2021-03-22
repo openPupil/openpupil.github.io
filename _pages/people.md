@@ -8,7 +8,6 @@ front-page-order: 3
 
 <div class="people-widget">
     <div class="row people-row">
-
         {% for person in site.people %}
         <div class="people-person col-12 col-md-auto">
             <a href="/">
@@ -32,6 +31,5 @@ front-page-order: 3
             </div>
         </div>
         {% endfor %}
-
     </div>
 </div>

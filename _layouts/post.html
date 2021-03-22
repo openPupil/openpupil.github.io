@@ -5,7 +5,7 @@ layout: default
 <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/lightbox.min.css"/>
 
 
-<div class="small-intro">
+<div class="small-intro" {% if page.preview-img %} style="background-position: top;background-image:radial-gradient(circle at 50% 50%,rgba(0,0,0,0.46),rgba(0,0,0,0.18)),url({{ site.baseurl }}/{{ page.preview-img }});" {% endif %}>
   <div class="intro-body">
     <div class="container">
       <div class="row justify-content-center">
@@ -152,13 +152,22 @@ layout: default
                 <a>{% if page.license %} {{ page.license }} {% else %} N/A {% endif %}</a>
               </div>
 
-              <h6><a data-toggle="collapse" href="#citation" role="button" aria-expanded="false" aria-controls="citation"><i class="fa fa-quote-left fa-fw"></i> Cite</a></h6>
+              {% if page.citation %}
+              <div class="widget">
+                <h6><i class="fa fa-quote-left fa-fw"></i> Cite</a></h6>
+                <div class="card card-body citation-field">
+                  {{ page.citation }} 
+                </div>
+              </div>
+              {% endif %}
+
+              <!-- <h6><a data-toggle="collapse" href="#citation" role="button" aria-expanded="false" aria-controls="citation"><i class="fa fa-quote-left fa-fw"></i> Cite</a></h6>
               <div class="collapse" id="citation">
                 <div class="card card-body citation-field">
                   {{ page.citation }} 
                 </div>
                 <br>
-              </div>
+              </div> -->
 
               <a href="{{ page.download_link }}" target="_blank" class="btn btnghost btn-lg"><i class="fa fa-external-link fa-fw"></i> <span class="network-name">Download</span></a>
               
