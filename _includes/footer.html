@@ -5,9 +5,9 @@
                 <div class="col-sm-6 col-md-3 item">
                     <h3>Resources</h3>
                     <ul>
-                        <li><a href="{{ site.baseurl}}/sitemap.xml">Sitemap</a></li>
-                        <li><a href="{{ site.baseurl}}/atom.xml">Atom</a></li>
-                        <li><a href="{{ site.baseurl}}/feed.json">JSON</a></li>
+                        <li><a href="{{ 'sitemap.xml' | relative_url }}">Sitemap</a></li>
+                        <li><a href="{{ 'atom.xml' | relative_url }}">Atom</a></li>
+                        <li><a href="{{ 'feed.json' | relative_url }}">JSON</a></li>
                     </ul>
                 </div>
                 <div class="col-sm-6 col-md-3 item">
@@ -15,7 +15,7 @@
                     <ul>
                         {% for p in site.legal %}
 
-                        <li><a href="{{ site.baseurl}}{{ p.url }}">{{ p.title }}</a></li>
+                        <li><a href="{{ p.url | relative_url }}">{{ p.title }}</a></li>
                         
                         {% endfor %}
                     </ul>

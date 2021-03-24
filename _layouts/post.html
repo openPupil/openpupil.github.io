@@ -2,10 +2,10 @@
 layout: default
 ---
 
-<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/lightbox.min.css"/>
+<link rel="stylesheet" type="text/css" href="{{ 'assets/css/lightbox.min.css' | relative_url }}"/>
 
 
-<div class="small-intro" {% if page.preview-img %} style="background-position: top;background-image:radial-gradient(circle at 50% 50%,rgba(0,0,0,0.46),rgba(0,0,0,0.18)),url({{ site.baseurl }}/{{ page.preview-img }});" {% endif %}>
+<div class="small-intro" {% if page.preview-img %} style="background-position: top;background-image:radial-gradient(circle at 50% 50%,rgba(0,0,0,0.46),rgba(0,0,0,0.18)),url({{ page.preview-img | relative_url }});" {% endif %}>
   <div class="intro-body">
     <div class="container">
       <div class="row justify-content-center">
@@ -178,4 +178,4 @@ layout: default
   </section>
 
   
-  <script src="{{ site.baseurl }}/assets/js/lightbox.min.js"></script>
+  <script src="{{ 'assets/js/lightbox.min.js' | relative_url }}"></script>

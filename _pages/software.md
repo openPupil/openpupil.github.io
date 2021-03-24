@@ -16,7 +16,7 @@ front-page-width: 8 # Describes the width of the page in columns from 1 to 12, 8
     </div>
     <div class="col-md-6">
         <h5>
-            <a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>
+            <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
         </h5>
         <div>
             <p>

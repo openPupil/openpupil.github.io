@@ -23,7 +23,7 @@
             <td>{{ post.tags | join: ', ' | strip_html | escape }}</td>
             <td>{{ post.categories | join: ', ' | strip_html | escape }}</td>
             <td>{{ post.date | date: "%-d %B %Y" }}</td>
-            <td>{{ site.baseurl }}{{ post.url }}</td>
+            <td>{{ post.url | relative_url }}</td>
         </tr>
 
         {% endfor %}
