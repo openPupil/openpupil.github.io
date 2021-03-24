@@ -1,16 +1,11 @@
 
-URL: https://lodemo.gitlab.io/openpupilwebsite/
-
-
-Only visible for project member at the moment.
-
-
 # TODO
 
 - Update texts
 - Create Google Forms and link it
 - Modify robots.txt to allow scraping when public
 - Update software entries
+- Update under construction in index.html
 
 - If a chart plot should be shown, plotting some data from the table, see table.js and uncomment the code, and move the chart.md from misc to _pages directory
 
