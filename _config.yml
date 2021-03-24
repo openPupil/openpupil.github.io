@@ -6,7 +6,7 @@ summary: A curation of open-source pupil datasets compiled by researcher from di
 github: "https://github.com/openPupil"
 permalink: pretty
 
-baseurl: "/openpupilwebsite"
+#baseurl: "/openpupilwebsite"
 
 highlighter: none
 
